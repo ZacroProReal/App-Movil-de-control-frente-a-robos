@@ -1,0 +1,23 @@
+[33mcommit 500f2e8eafded43e97997fb29ad8deae5d15b5b3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Juan Manuel Bolivar <jbolivarm2@ucentral.edu.co>
+Date:   Wed Oct 23 10:05:29 2024 -0500
+
+    Agregacion Entidad
+
+[33mcommit 44fa2bd6ac6d41715df6d8e025b14ca94ebf332b[m
+Author: Juan Manuel Bolivar <jbolivarm2@ucentral.edu.co>
+Date:   Mon Oct 21 22:36:11 2024 -0500
+
+    Agregando valores en SQLite
+
+[33mcommit af6d14b55fd9f0b67d31076fd59db1bd7f49694c[m
+Author: Juan Manuel Bolivar <jbolivarm2@ucentral.edu.co>
+Date:   Mon Oct 21 21:33:51 2024 -0500
+
+    Agregando Boton, ir a Inicio Sesion
+
+[33mcommit cbb5ba6dd4685d990d3f5515c821fe209f80ba58[m[33m ([m[1;32mfirebase[m[33m)[m
+Author: Juan Manuel Bolivar <jbolivarm2@ucentral.edu.co>
+Date:   Mon Oct 21 21:22:30 2024 -0500
+
+    Inicio de Proyecto.

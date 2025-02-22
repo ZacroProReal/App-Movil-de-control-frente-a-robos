@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Spinner para seleccionar el contacto -->
+    <Spinner
+        android:id="@+id/spinnerContactos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:spinnerMode="dropdown" />
+
+    <!-- Campo para escribir el mensaje -->
+    <EditText
+        android:id="@+id/editTextMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="top"
+        android:hint="Escribir mensaje:"
+        android:inputType="textMultiLine"
+        android:minLines="3" />
+
+    <!-- Botón para enviar el mensaje -->
+    <Button
+        android:id="@+id/buttonEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar mensaje" />
+
+    <!-- RecyclerView para mostrar los mensajes -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMensajesContactos"
+        android:layout_width="367dp"
+        android:layout_height="410dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:scrollbars="vertical" />
+
+    <Button
+        android:id="@+id/idVerMensajes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Mensajes" />
+</LinearLayout>

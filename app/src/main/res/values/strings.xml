@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">aplicativoMovil</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="imagen_login">imagen_login</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="todo">TODO</string>
+    <string name="contactoEmer">Ingrese Contacto de Emergencia:</string>
+
+    <!-- STRING PARA CREAR UNA CUENTA  -->
+    <string name="hint_nombre">Ingrese su nombre: </string>
+    <string name="hint_telefono">Ingrese su Telfono: </string>
+    <string name="hint_correo_electronico">Ingrese su correo Electronico: </string>
+    <string name="hint_guardar">Guardar</string>
+    <string name="hint_siguiente">Siguiente</string>
+    <string name="hint_contrasena">Ingrese su contraseña</string>
+    <string name="hint_confirmar_contrasena">Confirmar contraseña</string>
+
+
+    <!--IR AL MAPA -->
+    <string name="hint_mapa">Ir al Mapa</string>
+
+    <!--INICIAR SESION ACTIVITY -->
+    <string name="hint_iniciarSesion">Iniciar Sesión</string>
+    <string name="hint_RestaurarContrasena">Restaurar Contraseña</string>
+    <string name="hint_registrarse">Registrarse</string>
+
+    <!-- RESTAURAR CONTRASENA -->
+    <string name="hint_nuevaContrasena">Escriba Nueva Contraseña</string>
+    <string name="hint_confirNuevaContrasena">Vuelva ha Escribir Contraseña</string>
+    <string name="hint_aceptar">Aceptar</string>
+
+    <!--CONTACTO EMERGENCIA -->
+    <string name="hint_agregarContacto">Agregar Nuevo Contacto</string>
+    <string name="msg_token_fmt">Token de registro: %s</string>
+
+</resources>

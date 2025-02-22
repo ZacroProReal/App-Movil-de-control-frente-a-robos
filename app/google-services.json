@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "725320734434",
+    "project_id": "aplicativomovil-63b8e",
+    "storage_bucket": "aplicativomovil-63b8e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725320734434:android:604e78b54a29fc3edf30bb",
+        "android_client_info": {
+          "package_name": "com.example.aplicativomovil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnZKp8qOm-IXsHwi-z7-dqzGewvk7BEp8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
