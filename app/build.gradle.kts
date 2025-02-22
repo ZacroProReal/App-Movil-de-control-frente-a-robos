@@ -1,8 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
-    //FIREBASE
-    //id("com.android.application")
     id("com.google.gms.google-services")
 }
 
@@ -17,6 +15,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+        // Especificar el runner de pruebas para instrumentación
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -34,54 +33,57 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     buildFeatures {
         viewBinding = true
+    }
+
+    // Opcional: Habilitar el orquestador de pruebas en Test Lab
+    testOptions {
+        execution = "ANDROIDX_TEST_ORCHESTRATOR"
     }
 }
 
 dependencies {
 
+    // Dependencias principales
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.play.services.maps)
-    //FIREBASE
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.22")
+
+    // Firebase BoM (Usar una sola versión)
     implementation(platform("com.google.firebase:firebase-bom:33.5.0"))
-    implementation ("com.google.firebase:firebase-firestore:24.8.1")
-    implementation(libs.firebase.firestore)
-    implementation(libs.firebase.auth)
-    //FIREBASE AUTENTICATION
-    // Import the BoM for the Firebase platform
-    implementation(platform("com.google.firebase:firebase-bom:33.4.0"))
-    // Add the dependency for the Firebase Authentication library
-    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-auth")
-    implementation(libs.firebase.database)
+    implementation("com.google.firebase:firebase-database")
+    implementation("com.google.firebase:firebase-messaging")
+
+    // Google Play Services - Ubicación
     implementation(libs.play.services.location)
 
-    //FIREBASE CLOUD MESSASING
-    implementation(libs.firebase.messaging)
-    implementation ("com.google.firebase:firebase-messaging:24.1.0")
-    implementation(libs.junit.jupiter)
-    implementation(libs.testng)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-    implementation(kotlin("script-runtime"))
+    // HTTP Requests (OkHttp)
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
 
-    //FIREBASAE FIREBABASE CLOUD MESSASING(FCM)
-    implementation ("com.squareup.okhttp3:okhttp:4.10.0")
-    implementation ("com.google.firebase:firebase-messaging:23.0.0")
+    // JUnit 5 para pruebas unitarias
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
 
-    //Pruebas tester
-    testImplementation ("org.junit.jupiter:junit-jupiter-api:5.7.0")
-    testImplementation ("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+    // Excluir Hamcrest si es necesario
+    configurations.all {
+        exclude(group = "org.hamcrest", module = "hamcrest-core")
+    }
 
-    // Dependencias para Mockito
-    testImplementation ("org.mockito:mockito-core:5.15.2")
-    testImplementation ("org.mockito:mockito-inline:5.15.2")
+    // Kotlin Script Runtime (Corrección)
+    implementation("org.jetbrains.kotlin:kotlin-script-runtime:1.9.22")
 
-    // Dependencia de Firebase para pruebas unitarias
-    testImplementation ("com.google.firebase:firebase-auth:21.0.1")
+    // Dependencias para pruebas instrumentadas (Android Test)
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    // Opcional: Orquestador de pruebas para Firebase Test Lab
+    androidTestUtil("androidx.test:orchestrator:1.4.2")
 }

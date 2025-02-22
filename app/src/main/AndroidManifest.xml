@@ -14,7 +14,6 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
-
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -24,6 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicativoMovil"
         tools:targetApi="31" >
+
         <activity
             android:name=".ContactoEmergencia.agregarContactoEmergencia"
             android:exported="false" />
@@ -81,6 +81,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <!--SERVICIO DE MESSASING CLOUD RESIBIR EN SEGUNDO PLANO -->
         <service
             android:name=".messageCloud.MyFirebaseInstanceIDService"
@@ -89,7 +90,7 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>
         </service>
-
+        <uses-library android:name="android.test.runner" />
     </application>
 
 </manifest>
