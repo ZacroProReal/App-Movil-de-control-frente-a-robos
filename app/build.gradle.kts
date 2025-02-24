@@ -63,11 +63,25 @@ dependencies {
     //FIREBASE CLOUD MESSASING
     implementation(libs.firebase.messaging)
     implementation ("com.google.firebase:firebase-messaging:24.1.0")
+    implementation(libs.junit.jupiter)
+    implementation(libs.testng)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation(kotlin("script-runtime"))
+
     //FIREBASAE FIREBABASE CLOUD MESSASING(FCM)
     implementation ("com.squareup.okhttp3:okhttp:4.10.0")
     implementation ("com.google.firebase:firebase-messaging:23.0.0")
+
+    //Pruebas tester
+    testImplementation ("org.junit.jupiter:junit-jupiter-api:5.7.0")
+    testImplementation ("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+
+    // Dependencias para Mockito
+    testImplementation ("org.mockito:mockito-core:5.15.2")
+    testImplementation ("org.mockito:mockito-inline:5.15.2")
+
+    // Dependencia de Firebase para pruebas unitarias
+    testImplementation ("com.google.firebase:firebase-auth:21.0.1")
 }
